@@ -1,0 +1,12 @@
+
+### 3. **Add Python Scripts**:
+   Add Python scripts for each type of cyber attack simulation. Here are some categories you can include:
+
+   - **Brute Force Attacks**: Tools that simulate brute-forcing passwords for various services like SSH or HTTP.
+   - **Denial of Service (DoS) Attacks**: Scripts that simulate flooding servers with traffic.
+   - **Phishing Simulations**: Email or web-based phishing simulation tools.
+   - **Network Attacks**: Tools for ARP spoofing, DNS poisoning, or other network attacks.
+   - **Advanced Techniques**: Reverse shells, privilege escalation scripts, etc.
+
+### Example File Structure:
+

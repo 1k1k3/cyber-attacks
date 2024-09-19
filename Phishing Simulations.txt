@@ -1,0 +1,23 @@
+# Basic email phishing simulation using smtplib
+import smtplib
+
+sender = 'fake-email@example.com'
+receiver = 'victim@example.com'
+message = """\
+Subject: Login to Your Account
+
+Dear User,
+
+Click the link below to login to your account:
+http://fake-login-page.com
+
+Best,
+The Security Team
+"""
+
+with smtplib.SMTP('smtp.example.com', 587) as server:
+    server.starttls()
+    server.login(sender, 'password')
+    server.sendmail(sender, receiver, message)
+
+print("Phishing email sent!")

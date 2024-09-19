@@ -1,0 +1,8 @@
+
+### 4. **Commit and Push**:
+   After adding content to the repository, commit your changes and push them to GitHub:
+
+```bash
+git add .
+git commit -m "Initial commit with cyber attack simulation scripts"
+git push origin main

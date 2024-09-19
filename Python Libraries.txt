@@ -1,0 +1,6 @@
+Suggested Python Libraries for Cyber Attacks Simulation:
+paramiko: for SSH brute force.
+smtplib: for simulating phishing emails.
+scapy: for network attacks (ARP spoofing, DNS poisoning).
+socket: for network connections and DoS simulations.
+subprocess and os: for launching reverse shells
